@@ -1,0 +1,14 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import CTA from '../../components/CTA.astro';
+import { services } from '../../data';
+export function getStaticPaths() { return services.map(service=>({params:{slug:service.slug},props:{service}})); }
+const { service } = Astro.props;
+---
+<Layout title={`${service.name} recruitment`} description={service.description}>
+  <section class="page-heading container"><a class="breadcrumb" href="/services/">← All expertise</a><p class="eyebrow">{service.number} — OUR EXPERTISE</p><h1>{service.name}<span class="heading-dot">.</span></h1><div class="page-heading-bottom"><p>{service.description}</p><Icon name={service.icon} size={72}/></div></section>
+  <section class="section container detail-layout"><div data-reveal><p class="eyebrow">THE REQUIREMENT COMES FIRST</p><h2>{service.short}</h2><p class="large-copy">{service.detail}</p><p>India and Nepal are our principal sourcing countries. Each engagement depends on candidate availability, the agreed scope, and applicable requirements.</p><a class="button" href={`/contact/?sector=${service.slug}`}>Discuss this requirement <Icon name="up-right"/></a></div><aside class="brief-aside"><p class="eyebrow">FOR A USEFUL FIRST CONVERSATION</p><h3>Tell us about…</h3><ul class="check-list">{service.needs.map(n=><li><Icon name="check" size={19}/><span>{n}</span></li>)}</ul><a class="text-link" href="/employers/#checklist">Your employer checklist <Icon/></a></aside></section>
+  <section class="section role-section"><div class="container"><p class="eyebrow">ROLE EXAMPLES</p><h2>What does your <em>team need?</em></h2><p class="section-description">Select a role to begin an enquiry. These examples are not a current vacancy list.</p><div class="role-grid">{service.roles.map(role=><a class="role-item" href={`/contact/?sector=${service.slug}&role=${encodeURIComponent(role)}`}><h3>{role}</h3><Icon name="up-right" size={20}/></a>)}</div></div></section>
+  <section class="container section compact-section"><p class="eyebrow">BEFORE RECRUITMENT PROCEEDS</p><h2>Clear terms. <em>Shared understanding.</em></h2><p class="measure">Assessment, fees, responsibilities, employment conditions, and any coordination or support need to be agreed for the individual engagement. Timelines and immigration outcomes are not guaranteed.</p><a class="text-link" href="/employers/">See how the process works <Icon/></a></section><CTA/>
+</Layout>

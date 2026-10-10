@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { company } from '../data';
+---
+<Layout title="Privacy & enquiries" description="How the Victoria website enquiry builder handles information and how to contact the company about your enquiry.">
+  <section class="page-heading container"><p class="eyebrow">PRIVACY & ENQUIRIES</p><h1>Your information.<br/><em>Your choice to send.</em></h1></section>
+  <article class="container prose section">
+    <h2>Using the enquiry builder</h2><p>The enquiry builder prepares a message in your browser. It does not submit your details to a website database or store the brief in browser storage. Details stay in the current page until you choose a contact option, refresh, or leave. Your browser may offer its own autofill features.</p>
+    <h2>Sending your enquiry</h2><p>If you choose WhatsApp, the prepared message is passed to WhatsApp in a link. If you choose email, the site asks your email app to open a draft. Those services process information according to their own policies. You need to complete the send action in the chosen app; the website cannot verify delivery.</p><p>Your brief can also be copied or downloaded as a text file. A downloaded file remains on your device until you delete it.</p>
+    <h2>What to include</h2><p>Use the enquiry to share your business contact details and workforce requirements. Do not include passport numbers, identity documents, financial details, medical information, or candidate records. Any later document exchange should be arranged directly with the team through an appropriate channel.</p>
+    <h2>Cookies and third-party content</h2><p>This website does not use advertising trackers, analytics scripts, embedded maps, or third-party font requests. Fonts and images are served with the website. The hosting provider may process routine request information, such as IP addresses and browser details, to deliver and secure the site.</p>
+    <h2>After you contact Victoria</h2><p>The company receives information you choose to send through its business contact channels. Ask the team how your information will be used, who needs access to it, and how long it will be kept before sharing additional personal records.</p>
+    <h2>Questions about your information</h2><p>Contact {company.legalName} at <a href={`mailto:${company.email}`}>{company.email}</a> for questions about an enquiry or to request correction or deletion of information you have sent. The team will need enough detail to identify the relevant communication.</p>
+  </article>
+</Layout>

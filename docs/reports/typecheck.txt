@@ -1,0 +1,17 @@
+
+> victoria-foreign-employment@1.0.0 check
+> astro check
+
+23:44:07 [vite] Re-optimizing dependencies because vite config has changed
+23:44:07 [types] Generated 311ms
+23:44:07 [check] Getting diagnostics for Astro files in /workspace/razeekrifkhan...
+Result (23 files):
+- 0 errors
+- 0 warnings
+- 0 hints
+
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice

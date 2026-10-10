@@ -1,0 +1,266 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/services/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/services/skilled-construction/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/services/site-support/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/services/hospitality/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/services/domestic-workers/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/employers/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/about/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/contact/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/privacy/",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/404.html",
+    "width": 1440,
+    "scrollWidth": 1440,
+    "images": true
+  },
+  {
+    "route": "/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/services/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/services/skilled-construction/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/services/site-support/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/services/hospitality/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/services/domestic-workers/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/employers/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/about/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/contact/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/privacy/",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/404.html",
+    "width": 768,
+    "scrollWidth": 768,
+    "images": true
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/services/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/services/skilled-construction/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/services/site-support/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/services/hospitality/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/services/domestic-workers/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/employers/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/about/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/contact/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/privacy/",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/404.html",
+    "width": 390,
+    "scrollWidth": 390,
+    "images": true
+  },
+  {
+    "route": "/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/services/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/services/skilled-construction/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/services/site-support/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/services/hospitality/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/services/domestic-workers/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/employers/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/about/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/contact/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/privacy/",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  },
+  {
+    "route": "/404.html",
+    "width": 320,
+    "scrollWidth": 320,
+    "images": true
+  }
+]

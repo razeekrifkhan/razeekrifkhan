@@ -1,0 +1,73 @@
+---
+import '@fontsource-variable/dm-sans';
+import '@fontsource-variable/cormorant-garamond';
+import '@fontsource-variable/cormorant-garamond/wght-italic.css';
+import serifFont from '@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-normal.woff2?url';
+import italicFont from '@fontsource-variable/cormorant-garamond/files/cormorant-garamond-latin-wght-italic.woff2?url';
+import bodyFont from '@fontsource-variable/dm-sans/files/dm-sans-latin-wght-normal.woff2?url';
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+import { company } from '../data';
+interface Props { title: string; description: string; }
+const { title, description } = Astro.props;
+const path = Astro.url.pathname;
+const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
+const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && Boolean(Astro.site) && path !== '/404.html';
+const links = [{href:'/services/',label:'Our expertise'},{href:'/employers/',label:'For employers'},{href:'/about/',label:'About Victoria'}];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#512f36" />
+    <meta name="description" content={description} />
+    <meta name="robots" content={indexable ? 'index, follow' : 'noindex, follow'} />
+    <meta name="generator" content={Astro.generator}/>
+    <title>{title} | Victoria Foreign Employment</title>
+    {canonical && <link rel="canonical" href={canonical}/>}
+    <meta property="og:title" content={`${title} | Victoria Foreign Employment`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_LK" />
+    <meta property="og:site_name" content="Victoria Foreign Employment" />
+    {canonical && <meta property="og:url" content={canonical}/>}
+    {Astro.site && <meta property="og:image" content={new URL('/images/social.jpg',Astro.site).href}/>}
+    {Astro.site && <meta property="og:image:alt" content="Victoria Foreign Employment — Good work starts with the right people."/>}
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+    <meta name="twitter:card" content="summary_large_image"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preload" href={serifFont} as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href={italicFont} as="font" type="font/woff2" crossorigin/>
+    <link rel="preload" href={bodyFont} as="font" type="font/woff2" crossorigin/>
+    <slot name="head"/>
+  </head>
+  <body class="no-js">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner container">
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V<span>◆</span></span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a>
+        <nav class="desktop-nav" aria-label="Main navigation">{links.map(link=><a href={link.href} aria-current={path.startsWith(link.href)?'page':undefined}>{link.label}</a>)}</nav>
+        <a class="header-contact" href="/contact/">Let’s talk <Icon name="up-right" size={17}/></a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-haspopup="dialog" aria-controls="mobile-menu"><span></span><span></span></button>
+      </div>
+    </header>
+    <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="menu-title">
+      <div class="mobile-menu-head"><span id="menu-title" class="eyebrow">EXPLORE VICTORIA</span><button class="menu-close" aria-label="Close navigation">×</button></div>
+      <nav aria-label="Mobile navigation"><a href="/">Home <Icon/></a>{links.map(link=><a href={link.href}>{link.label}<Icon/></a>)}<a href="/contact/">Let’s talk<Icon/></a></nav>
+      <p>People. Purpose. Possibility.</p>
+      <a class="small-link" href={`https://wa.me/${company.whatsapp}`}>WhatsApp {company.phoneDisplay}</a>
+    </dialog>
+    <main id="main"><slot/></main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-identity"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V<span>◆</span></span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a><p>Connecting workforce requirements<br/>with human possibility.</p><span class="group-note">ASSOCIATED WITH VICTORIA GROUP</span></div>
+        <div><h2>Discover</h2><a href="/services/">Our expertise</a><a href="/employers/">For employers</a><a href="/about/">About Victoria</a><a href="/employers/#questions">Common questions</a></div>
+        <div class="footer-contact"><h2>Start a conversation</h2><a href={`https://wa.me/${company.whatsapp}`}>WhatsApp · {company.phoneDisplay} <Icon name="up-right" size={14}/></a><a href={`mailto:${company.email}`}>{company.email}</a><a href="/contact/?audience=jobseeker">Looking for work? Enquire with us <Icon name="arrow" size={14}/></a></div>
+      </div>
+      <div class="container footer-bottom"><p>© {new Date().getFullYear()} {company.legalName}</p><div><a href="/privacy/">Privacy & enquiries</a><span>Built around people.</span></div></div>
+    </footer>
+    <script src="../scripts/site.ts"></script>
+  </body>
+</html>

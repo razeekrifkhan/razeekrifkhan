@@ -1,0 +1,34 @@
+{
+  "note": "Local mobile lab audit of isolated indexable build using a reserved example origin; not a public deployment. Precedes final small arrow and tablet-button refinements.",
+  "lighthouseVersion": "13.5.0",
+  "fetchTime": "2026-10-09T23:43:27.843Z",
+  "scores": {
+    "performance": 0.95,
+    "accessibility": 1,
+    "best-practices": 1,
+    "seo": 1,
+    "agentic-browsing": 1
+  },
+  "metrics": {
+    "first-contentful-paint": {
+      "value": 1076.99545,
+      "display": "1.1\u00a0s"
+    },
+    "largest-contentful-paint": {
+      "value": 2707.9909,
+      "display": "2.7\u00a0s"
+    },
+    "cumulative-layout-shift": {
+      "value": 0,
+      "display": "0"
+    },
+    "total-blocking-time": {
+      "value": 53,
+      "display": "50\u00a0ms"
+    },
+    "speed-index": {
+      "value": 3610.2611914578456,
+      "display": "3.6\u00a0s"
+    }
+  }
+}

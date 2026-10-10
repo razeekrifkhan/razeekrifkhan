@@ -1,0 +1,12 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import CTA from '../../components/CTA.astro';
+import { services } from '../../data';
+---
+<Layout title="Our expertise" description="Explore skilled construction, site support, hospitality, and domestic workforce recruitment for employers in Sri Lanka.">
+  <section class="page-heading container"><p class="eyebrow">OUR EXPERTISE</p><h1>The right skills.<br/><em>For the work ahead.</em></h1><div class="page-heading-bottom"><p>Four areas of focus. One considered approach to understanding your requirements and finding suitable people.</p><span class="editorial-note">SOURCING PRINCIPALLY<br/>FROM INDIA & NEPAL</span></div></section>
+  <section class="container services-detail-list">{services.map(s=><article class="service-feature" data-reveal><div class="service-feature-title"><span class="eyebrow">{s.number} / EXPERTISE</span><Icon name={s.icon} size={52}/><h2>{s.name}</h2></div><div><p class="large-copy">{s.short}</p><p>{s.description}</p><div class="role-tags">{s.roles.slice(0,4).map(r=><span>{r}</span>)}{s.roles.length>4&&<span>+ {s.roles.length-4} more</span>}</div><a class="text-link" href={`/services/${s.slug}/`}>Explore {s.number==='02'?'site support':s.name.toLowerCase()} <Icon/></a></div></article>)}</section>
+  <section class="section role-section" id="roles"><div class="container"><div class="section-heading"><div><p class="eyebrow">A STARTING POINT FOR YOUR BRIEF</p><h2>Explore the <em>roles.</em></h2></div><p>These are role examples for enquiries, not advertised vacancies. Scope, suitability, and availability are discussed individually.</p></div><div class="role-filters" role="group" aria-label="Filter role examples"><button data-filter="all" aria-pressed="true">All roles</button>{services.map(s=><button data-filter={s.slug} aria-pressed="false">{s.number==='02'?'Site support':s.name}</button>)}</div><p id="role-status" class="sr-only" role="status">{services.reduce((n,s)=>n+s.roles.length,0)} role examples shown</p><div class="role-grid">{services.flatMap(s=>s.roles.map(role=><a class="role-item" data-role-sector={s.slug} href={`/contact/?sector=${s.slug}&role=${encodeURIComponent(role)}`}><div><span>{s.number==='02'?'Site support':s.name}</span><h3>{role}</h3></div><Icon name="up-right" size={18}/></a>))}</div></div></section>
+  <CTA/>
+</Layout>

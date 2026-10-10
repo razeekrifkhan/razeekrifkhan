@@ -1,0 +1,11 @@
+{
+  "note": "Isolated local verification using reserved example origin; not a deployment or approved domain",
+  "checks": {
+    "canonical": true,
+    "indexable_meta": true,
+    "social_image": true,
+    "social_file": true,
+    "robots_allow": true,
+    "sitemap_count": true
+  }
+}

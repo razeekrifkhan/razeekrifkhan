@@ -1,0 +1,8 @@
+---
+import { faqs } from '../data';
+import Icon from './Icon.astro';
+const { limit = faqs.length } = Astro.props;
+---
+<div class="faq-list">
+  {faqs.slice(0, limit).map(({q,a}) => <details><summary>{q}<span><Icon name="plus" size={20}/></span></summary><div class="faq-answer"><p>{a}</p></div></details>)}
+</div>
