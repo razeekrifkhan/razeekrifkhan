@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CTA from '../components/CTA.astro';
+import FAQ from '../components/FAQ.astro';
+import { services } from '../data';
+---
+<Layout title="The right people. A stronger workforce." description="Workforce recruitment for Sri Lankan employers. Explore construction, hospitality, site support, and domestic recruitment with Victoria Foreign Employment.">
+  <section class="home-hero">
+    <div class="hero-copy">
+      <p class="eyebrow"><span class="tiny-line"></span> WORKFORCE RECRUITMENT · SRI LANKA</p>
+      <h1>Good work<br/>starts with<br/><em>the right people.</em></h1>
+      <p class="hero-intro">Your business has work to do.<br/>Let’s find the people to help you do it.</p>
+      <a class="button" href="/contact/">Discuss your workforce <Icon name="up-right" size={20}/></a>
+      <div class="hero-foot"><span>FOR SRI LANKAN EMPLOYERS</span><a href="#expertise">Explore <span aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="hero-visual">
+      <picture><source srcset="/images/workforce-720.webp 720w, /images/workforce-1280.webp 1280w" sizes="(max-width: 760px) 100vw, 48vw" type="image/webp"/><img src="/images/workforce-1280.webp" alt="Illustrative scene of two construction professionals reviewing plans in a sunlit building" width="1280" height="853" fetchpriority="high"/></picture>
+      <div class="hero-image-top"><span>PEOPLE & POSSIBILITY</span><span>01 / VICTORIA</span></div>
+      <div class="hero-image-bottom"><span>Built on ambition.<br/><em>Brought to life by people.</em></span><span class="image-symbol" aria-hidden="true"><Icon name="up-right" size={25}/></span></div>
+      <span class="image-disclosure">Illustrative image</span>
+    </div>
+  </section>
+  <section class="intro-strip"><div class="container"><p>International sourcing.<br/><strong>A local understanding.</strong></p><div><span class="country-dot"></span> INDIA <span class="connector">/</span> NEPAL <Icon size={24}/> SRI LANKA</div><p class="strip-description">Connecting your workforce requirements<br/>with people from India and Nepal.</p></div></section>
+  <section class="section expertise-section" id="expertise">
+    <div class="container">
+      <div class="section-heading" data-reveal><div><p class="eyebrow">01 — OUR EXPERTISE</p><h2>Different industries.<br/><em>The same human focus.</em></h2></div><p>Every role has a purpose. We begin by understanding yours, then work to find people suited to the job.</p></div>
+      <div class="service-index">{services.map(service => <a href={`/services/${service.slug}/`} class="service-row" data-reveal><span class="service-number">{service.number}</span><span class="service-icon"><Icon name={service.icon} size={30}/></span><div><h3>{service.name}</h3><p>{service.description}</p></div><span class="circle-arrow"><Icon name="up-right"/></span></a>)}</div>
+      <div class="section-bottom"><p>Roles are enquiry categories, subject to availability and agreed requirements.</p><a class="text-link" href="/services/#roles">Explore role examples <Icon/></a></div>
+    </div>
+  </section>
+  <section class="approach-section section">
+    <div class="container approach-layout">
+      <div class="approach-intro" data-reveal><p class="eyebrow">02 — A CLEARER WAY FORWARD</p><h2>From your brief<br/>to the <em>next step.</em></h2><p>Good recruitment starts with the right questions. We help turn your workforce requirements into a considered recruitment process.</p><a class="text-link" href="/employers/">The employer journey <Icon/></a><div class="approach-note"><span aria-hidden="true"><Icon name="up-right" size={34}/></span><p>Clarity at the beginning.<br/>Confidence in what comes next.</p></div></div>
+      <ol class="process-list">{[
+        ['Understand the requirement', 'The roles, skills, headcount, and working conditions. A clear brief gives the process direction.'],
+        ['Source & assess', 'Candidate sourcing, interviewing, and screening against the requirements you have shared.'],
+        ['Select & coordinate', 'Discuss suitable candidates and agree the scope of documentation, visa, and travel coordination where applicable.'],
+        ['Prepare for the working relationship', 'Clarify arrival arrangements, responsibilities, and any agreed workforce support.'],
+      ].map(([title,text], i)=><li data-reveal><span>0{i+1}</span><div><h3>{title}</h3><p>{text}</p></div></li>)}</ol>
+    </div>
+  </section>
+  <section class="section about-preview">
+    <div class="container about-preview-grid">
+      <div class="typographic-art" aria-hidden="true" data-reveal><span class="art-caption">A VICTORIA GROUP ASSOCIATION</span><span class="art-v">V</span><div class="art-rule"></div><span class="art-bottom">A wider perspective.<br/><em>A people-first purpose.</em></span></div>
+      <div class="about-preview-copy" data-reveal><p class="eyebrow">03 — MEET VICTORIA</p><h2>Personal attention.<br/><em>Broader perspective.</em></h2><p class="large-copy">A workforce partner for employers building what comes next in Sri Lanka.</p><p>1 Victoria Foreign Employment is associated with Victoria Group. Our focus is straightforward: understand what employers need, source suitable candidates, and coordinate the steps agreed for each engagement.</p><a class="text-link" href="/about/">Get to know Victoria <Icon/></a></div>
+    </div>
+  </section>
+  <section class="section home-faq"><div class="container faq-layout"><div data-reveal><p class="eyebrow">BEFORE WE BEGIN</p><h2>A few useful<br/><em>answers.</em></h2><a class="text-link" href="/employers/#questions">All employer questions <Icon/></a></div><FAQ limit={3}/></div></section>
+  <CTA/>
+</Layout>

@@ -1,0 +1,40 @@
+
+> victoria-foreign-employment@1.0.0 test
+> playwright test
+
+
+Running 18 tests using 2 workers
+
+(node:3044) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3043) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop-chromium] › tests/website.spec.ts:19:1 › all built pages render, have metadata, valid local links and no overflow or runtime errors (3.0s)
+  ✓   3 [desktop-chromium] › tests/website.spec.ts:92:1 › role filters update results and prefill the correct enquiry (1.6s)
+  ✓   4 [desktop-chromium] › tests/website.spec.ts:122:1 › invalid input is explained, brief is reviewed without sending, and drafts use accurate details (2.9s)
+  ✓   2 [desktop-chromium] › tests/website.spec.ts:77:1 › WCAG A/AA automated checks on every page (8.4s)
+  ✓   6 [desktop-chromium] › tests/website.spec.ts:208:1 › navigation and FAQ work with a keyboard (636ms)
+  ✓   5 [desktop-chromium] › tests/website.spec.ts:173:1 › brief download works and clipboard failure has a useful fallback (2.1s)
+  ✓   7 [desktop-chromium] › tests/website.spec.ts:250:1 › reduced motion leaves all content visible and query input is inert (609ms)
+  ✓   8 [desktop-chromium] › tests/website.spec.ts:276:1 › content and contact paths are usable without JavaScript (780ms)
+  ✓   9 [desktop-chromium] › tests/website.spec.ts:294:1 › unknown routes return the designed 404, review builds prevent indexing, and download resources exist (904ms)
+(node:3728) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3737) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  10 [mobile-chromium] › tests/website.spec.ts:19:1 › all built pages render, have metadata, valid local links and no overflow or runtime errors (2.5s)
+  ✓  12 [mobile-chromium] › tests/website.spec.ts:92:1 › role filters update results and prefill the correct enquiry (1.5s)
+  ✓  13 [mobile-chromium] › tests/website.spec.ts:122:1 › invalid input is explained, brief is reviewed without sending, and drafts use accurate details (2.3s)
+  ✓  11 [mobile-chromium] › tests/website.spec.ts:77:1 › WCAG A/AA automated checks on every page (7.5s)
+  ✓  14 [mobile-chromium] › tests/website.spec.ts:173:1 › brief download works and clipboard failure has a useful fallback (2.7s)
+  ✓  15 [mobile-chromium] › tests/website.spec.ts:208:1 › navigation and FAQ work with a keyboard (1.3s)
+  ✓  16 [mobile-chromium] › tests/website.spec.ts:250:1 › reduced motion leaves all content visible and query input is inert (792ms)
+  ✓  17 [mobile-chromium] › tests/website.spec.ts:276:1 › content and contact paths are usable without JavaScript (790ms)
+  ✓  18 [mobile-chromium] › tests/website.spec.ts:294:1 › unknown routes return the designed 404, review builds prevent indexing, and download resources exist (609ms)
+
+  18 passed (24.3s)
+npm notice
+npm notice New major version of npm available! 11.9.0 -> 12.2.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.0
+npm notice To update run: npm install -g npm@12.2.0
+npm notice
