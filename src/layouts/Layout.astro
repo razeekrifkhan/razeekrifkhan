@@ -13,7 +13,7 @@ const { title, description } = Astro.props;
 const path = Astro.url.pathname;
 const canonical = Astro.site ? new URL(path, Astro.site).href : undefined;
 const indexable = import.meta.env.PUBLIC_INDEXABLE === 'true' && Boolean(Astro.site) && path !== '/404.html';
-const links = [{href:'/services/',label:'Our expertise'},{href:'/employers/',label:'For employers'},{href:'/about/',label:'About Victoria'}];
+const links = [{href:'/about/',label:'The company'},{href:'/services/',label:'Workforce desk'},{href:'/employers/',label:'For employers'}];
 ---
 <!doctype html>
 <html lang="en">
@@ -47,7 +47,7 @@ const links = [{href:'/services/',label:'Our expertise'},{href:'/employers/',lab
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header">
       <div class="header-inner container">
-        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V<span>◆</span></span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a>
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a>
         <nav class="desktop-nav" aria-label="Main navigation">{links.map(link=><a href={link.href} aria-current={path.startsWith(link.href)?'page':undefined}>{link.label}</a>)}</nav>
         <a class="header-contact" href="/contact/">Let’s talk <Icon name="up-right" size={17}/></a>
         <button class="menu-toggle" aria-label="Open navigation" aria-haspopup="dialog" aria-controls="mobile-menu"><span></span><span></span></button>
@@ -56,17 +56,17 @@ const links = [{href:'/services/',label:'Our expertise'},{href:'/employers/',lab
     <dialog id="mobile-menu" class="mobile-menu" aria-labelledby="menu-title">
       <div class="mobile-menu-head"><span id="menu-title" class="eyebrow">EXPLORE VICTORIA</span><button class="menu-close" aria-label="Close navigation">×</button></div>
       <nav aria-label="Mobile navigation"><a href="/">Home <Icon/></a>{links.map(link=><a href={link.href}>{link.label}<Icon/></a>)}<a href="/contact/">Let’s talk<Icon/></a></nav>
-      <p>People. Purpose. Possibility.</p>
+      <p>Foreign workforce recruitment for Sri Lankan employers.</p>
       <a class="small-link" href={`https://wa.me/${company.whatsapp}`}>WhatsApp {company.phoneDisplay}</a>
     </dialog>
     <main id="main"><slot/></main>
     <footer class="site-footer">
       <div class="container footer-top">
-        <div class="footer-identity"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V<span>◆</span></span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a><p>Connecting workforce requirements<br/>with human possibility.</p><span class="group-note">ASSOCIATED WITH VICTORIA GROUP</span></div>
+        <div class="footer-identity"><a class="brand" href="/"><span class="brand-mark" aria-hidden="true">V</span><span class="brand-type">VICTORIA <span>FOREIGN EMPLOYMENT</span></span></a><p>Recruitment and workforce coordination<br/>for Sri Lankan employers.</p><span class="group-note">ASSOCIATED WITH VICTORIA GROUP</span></div>
         <div><h2>Discover</h2><a href="/services/">Our expertise</a><a href="/employers/">For employers</a><a href="/about/">About Victoria</a><a href="/employers/#questions">Common questions</a></div>
         <div class="footer-contact"><h2>Start a conversation</h2><a href={`https://wa.me/${company.whatsapp}`}>WhatsApp · {company.phoneDisplay} <Icon name="up-right" size={14}/></a><a href={`mailto:${company.email}`}>{company.email}</a><a href="/contact/?audience=jobseeker">Looking for work? Enquire with us <Icon name="arrow" size={14}/></a></div>
       </div>
-      <div class="container footer-bottom"><p>© {new Date().getFullYear()} {company.legalName}</p><div><a href="/privacy/">Privacy & enquiries</a><span>Built around people.</span></div></div>
+      <div class="container footer-bottom"><p>© {new Date().getFullYear()} {company.legalName}</p><div><a href="/privacy/">Privacy & enquiries</a><span>Sri Lanka · India · Nepal</span></div></div>
     </footer>
     <script src="../scripts/site.ts"></script>
   </body>
