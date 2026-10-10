@@ -1,0 +1,3 @@
+Direct file:// navigation: blocked by managed Chromium policy (ERR_BLOCKED_BY_ADMINISTRATOR).
+Browser checks instead used the extracted archive under a nested HTTP path containing spaces.
+Desktop/mobile screenshots visually inspected. No file:// success claimed.

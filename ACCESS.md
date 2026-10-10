@@ -35,7 +35,7 @@ The source is published to GitHub on branch `codex/victoria-website`. Open https
 1. Open the `razeekrifkhan/razeekrifkhan` repository and select the `codex/victoria-website` branch.
 2. For all source and resources, use **Code → Download ZIP**, or clone that branch.
 3. For the compiled review website only, open `downloads/Victoria-website-review-build.zip` and use GitHub’s raw-file download control.
-4. Open this `ACCESS.md` first; the original profile `README.md` has been preserved.
+4. The website branch README links to the download and these instructions; the original profile text remains below it.
 
 GitHub publication makes the files downloadable. It does not automatically deploy a running website.
 
@@ -50,13 +50,14 @@ npm run dev
 
 Open the address printed by the development server on your own computer.
 
-For the compiled review ZIP, extract it and serve the folder containing `index.html` with a local HTTP server, for example:
+For the compiled review ZIP:
 
-```sh
-python -m http.server 8000
-```
+1. Download `downloads/Victoria-website-review-build.zip` from this branch.
+2. **Extract all** files into one folder (do not open the HTML from inside the ZIP).
+3. Double-click the extracted **index.html** to open it in your browser.
+4. Keep the accompanying folders together with the HTML files.
 
-Then browse the local server from that computer. **Do not double-click `index.html`:** the site uses root-relative URLs and must be served over HTTP. Opening it via `file://` can break styles, images, navigation, and scripts.
+This portable review package uses relative links and requires no installation. The production `dist/` output still requires an HTTP host. Developers can regenerate the portable package with `npm run build:review` (Node.js and Python 3 required).
 
 For a public website, approve the domain and company information, rebuild with the launch settings in `WEBSITE.md`, and deploy to an HTTPS static host. The supplied review build deliberately prevents search indexing.
 
@@ -69,3 +70,9 @@ For a public website, approve the domain and company information, rebuild with t
 - GitHub read access succeeded. The initial push was rejected with HTTP 403. After the user confirmed the app installation had read/write code access and all repositories selected, a retry succeeded. The branch is now published; the precise cause of the earlier rejection was not established.
 
 The verified failure was the delivery method. These checks do not prove that every possible deployment or browser is fault-free, but no application regression was reproduced in the test suite.
+
+## Portable review correction
+
+The original review ZIP contained production paths beginning `/`, which broke CSS and images when opening HTML directly. The replacement ZIP rewrites HTML links, image sources, and CSS font URLs relative to each file and links to explicit `index.html` pages.
+
+Validation: the actual extracted ZIP was tested beneath a folder with spaces, on desktop and mobile Chromium, covering all 11 pages, local assets and links, responsive layout, role filtering, enquiry prefill, validation and brief download. Direct `file://` browser testing was blocked by the cloud browser administrator policy (`ERR_BLOCKED_BY_ADMINISTRATOR`), so direct opening is not verified in this environment. No browser policy was changed.

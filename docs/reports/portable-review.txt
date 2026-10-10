@@ -1,0 +1,2 @@
+1440px: 11 pages, assets, links, layout, filters, prefill, validation and download passed
+390px: 11 pages, assets, links, layout, filters, prefill, validation and download passed
