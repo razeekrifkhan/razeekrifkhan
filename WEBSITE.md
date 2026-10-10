@@ -37,7 +37,7 @@ Tests use system Chromium at `/usr/bin/chromium`; set `CHROMIUM_PATH` to another
 
 ## Deployment
 
-No hosting project or approved public domain was available in this session. The Sites connector had no callable tools. No deployment, public URL, or GitHub push was made. The source has since been prepared on local branch `codex/victoria-website`; see ACCESS.md for the corrected delivery instructions.
+No hosting project or approved public domain was available in this session. The Sites connector had no callable tools. No website deployment or public website URL was created. The source is now published on GitHub branch `codex/victoria-website`; see ACCESS.md for download instructions.
 
 Build for an **approved** origin by supplying environment variables in your host or shell:
 

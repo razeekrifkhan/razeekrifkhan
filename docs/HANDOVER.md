@@ -14,7 +14,7 @@ The website is implemented and ready for stakeholder review. It is **not yet pub
 - **Accessibility and resilience:** semantic pages, skip link, visible focus, keyboard-operated native mobile dialog and FAQs, focus management, reduced-motion support, no-JavaScript reading/navigation/contact alternatives, and no fake submission success.
 - **Deployment foundations:** static output, local variable fonts and responsive WebP assets, unique titles/descriptions, canonical/social metadata when an origin is configured, social artwork, sitemap, robots/indexing controls, favicon, font licences, and static-host security headers.
 
-The original repository profile README was preserved. The application and documentation were added to the existing checkout; no worktree, push, or external publication was created. The source has since been prepared on local branch `codex/victoria-website`; see ACCESS.md for the delivery-debugging update.
+The original repository profile README was preserved. The application and documentation were added to the existing checkout; no worktree or website deployment was created. The source has since been published to GitHub branch `codex/victoria-website`; see ACCESS.md for the delivery-debugging update.
 
 ## Validation results
 
@@ -57,7 +57,7 @@ See [RESEARCH.md](RESEARCH.md) for direct references, findings, decisions, and t
 3. **Contact delivery:** with company authorisation, send a real test through the published WhatsApp account and mailbox. These external channels were not contacted during automated testing.
 4. **Optional server form:** the delivered frontend handoff is functional. If automatic server-side submission is desired, a real endpoint, delivery service, spam prevention, and retention policy must be configured. No unconfigured backend has been implied.
 
-The Sites connector had no callable tools in this session, so no Sites project or public preview URL could be created. The complete source and static output are available in the workspace and review archives.
+The Sites connector had no callable tools in this session, so no Sites project or public preview URL could be created. The complete source and compiled review ZIP are now available on GitHub branch `codex/victoria-website`, as well as in the workspace.
 
 ## Reusable cloud environment
 

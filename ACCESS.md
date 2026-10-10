@@ -28,9 +28,9 @@ At the initial handover, all website source files were untracked and had not bee
 | Original source archive | `/workspace/Victoria-website-source.zip` |
 | Original static archive | `/workspace/Victoria-website-review-build.zip` |
 
-The source is prepared on local branch `codex/victoria-website`. A local Git commit does not upload files to GitHub. Publication of that branch is the remaining delivery step and must be separately confirmed.
+The source is published to GitHub on branch `codex/victoria-website`. Open https://github.com/razeekrifkhan/razeekrifkhan/tree/codex/victoria-website to browse it. The website itself is not deployed.
 
-## After the branch is published to GitHub
+## Download from GitHub
 
 1. Open the `razeekrifkhan/razeekrifkhan` repository and select the `codex/victoria-website` branch.
 2. For all source and resources, use **Code → Download ZIP**, or clone that branch.
@@ -66,6 +66,6 @@ For a public website, approve the domain and company information, rebuild with t
 - Astro/TypeScript: 0 errors, 0 warnings, 0 hints.
 - Static build: 11 HTML pages successfully generated.
 - Browser checks: 18 passed, 0 failed, on desktop and mobile Chromium.
-- GitHub read access succeeded. No push or remote publication was performed as part of diagnosis.
+- GitHub read access succeeded. The initial push was rejected with HTTP 403. After the user confirmed the app installation had read/write code access and all repositories selected, a retry succeeded. The branch is now published; the precise cause of the earlier rejection was not established.
 
 The verified failure was the delivery method. These checks do not prove that every possible deployment or browser is fault-free, but no application regression was reproduced in the test suite.
